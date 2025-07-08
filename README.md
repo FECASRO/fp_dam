@@ -4,7 +4,7 @@ Este repositorio contiene los proyectos, ejercicios, prácticas y documentación
 
 ## 📁 PRIMER CURSO
 
-- ![🗂️](https://img.shields.io/badge/-Bases%20de%20Datos-blue?style=flat-square) [Bases de Datos](./1º%20DAM/Bases%20de%20Datos)
+- ![🗂️](https://img.shields.io/badge/Bases%20de%20Datos-blue?style=flat-square) [Bases de Datos](./1º%20DAM/Bases%20de%20Datos)
 - ![🗂️](https://img.shields.io/badge/-Entornos%20de%20Desarrollo-green?style=flat-square) [Entornos de Desarrollo](./1º%20DAM/Entornos%20de%20Desarrollo)
 - ![🗂️](https://img.shields.io/badge/-Lenguaje%20de%20Marcas-purple?style=flat-square) [Lenguaje de Marcas](./1º%20DAM/Lenguaje%20de%20Marcas)
 - ![🗂️](https://img.shields.io/badge/-Programación-orange?style=flat-square) [Programación](./1º%20DAM/Programación)
