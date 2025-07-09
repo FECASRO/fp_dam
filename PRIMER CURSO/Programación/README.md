@@ -2,6 +2,13 @@
 
 Este repositorio contiene los ejercicios, apuntes y prácticas de los distintos temas de la asignatura de Programación del primer curso del ciclo formativo DAM.
 
+## 🛠️ Tecnologías utilizadas
+
+![Java](https://img.shields.io/badge/Java-%23ED8B00?style=flat-square&logo=java&logoColor=white)
+![NetBeans](https://img.shields.io/badge/NetBeans-1B6AC6?style=flat-square&logo=apache-netbeans-ide&logoColor=white)
+![Eclipse](https://img.shields.io/badge/Eclipse-2C2255?style=flat-square&logo=eclipse-ide&logoColor=white)
+
+
 ## 📁 Temas
 
 - ![🗂️](https://img.shields.io/badge/TEMA%201-darkgreen?style=flat-square) [TEMA 1](./TEMA%201)
