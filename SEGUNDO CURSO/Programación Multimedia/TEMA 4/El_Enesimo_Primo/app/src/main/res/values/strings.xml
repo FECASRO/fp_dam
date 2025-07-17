@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">El Enésimo Primo</string>
+    <string name="textviewExplain">Calculadora de números primos:
+    Introduce qué número primo quieres calcular. Por ejemplo, si deseas saber el sexto número primo,
+    pon el número 6 y dale a calcular. Te dirá que el sexto número primo es 11.</string>
+    <string name="textviewPosition">Position:</string>
+    <string name="hint_enter_number">Introduce un número</string>
+    <string name="button_calculate">Calcular</string>
+</resources>

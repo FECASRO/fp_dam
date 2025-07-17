@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AnadirClienteActivity">
+
+    <!-- EditText para el nombre del cliente -->
+    <EditText
+        android:id="@+id/etNombreCliente"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Nombre del Cliente"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp"
+        android:padding="16dp"/>
+
+    <!-- EditText para el teléfono del cliente -->
+    <EditText
+        android:id="@+id/etTelefonoCliente"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Teléfono del Cliente"
+        app:layout_constraintTop_toBottomOf="@id/etNombreCliente"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:padding="16dp"/>
+
+    <!-- Botón para añadir el cliente -->
+    <Button
+        android:id="@+id/btnAñadirCliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Añadir Cliente"
+        app:layout_constraintTop_toBottomOf="@id/etTelefonoCliente"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp"/>
+
+    <Button
+        android:id="@+id/atrasAnadirCliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ATRÁS"
+        app:layout_constraintTop_toBottomOf="@id/btnAñadirCliente"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

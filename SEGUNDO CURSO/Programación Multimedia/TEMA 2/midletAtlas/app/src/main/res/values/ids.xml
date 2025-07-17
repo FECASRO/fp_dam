@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ID para el botón "Comenzar" -->
+    <item name="button_comenzar" type="id" />
+
+    <!-- ID para la imagen -->
+    <item name="image_view" type="id" />
+
+    <!-- ID para el texto de bienvenida -->
+    <item name="text_bienvenido" type="id" />
+</resources>

@@ -1,0 +1,10 @@
+<resources>
+    <!-- Nombre de la aplicación -->
+    <string name="app_name">midletAtlas</string>
+
+    <!-- Texto del botón "Comenzar" -->
+    <string name="button_comenzar_text">COMENZAR</string>
+
+    <!-- Texto de bienvenida -->
+    <string name="welcome_text">BIENVENIDO A MI MAPAMUNDI</string>
+</resources>
