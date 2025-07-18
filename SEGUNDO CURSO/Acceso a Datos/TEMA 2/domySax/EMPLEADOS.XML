@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<empleados>
+<empleado>
+<codigo>1</codigo>
+<nombre>Ana</nombre>
+<direccion>Calle 1</direccion>
+<salario>2500.5</salario>
+<comision>200.0</comision>
+</empleado>
+<empleado>
+<codigo>2</codigo>
+<nombre>Luis</nombre>
+<direccion>Calle 2</direccion>
+<salario>3200.75</salario>
+<comision>300.5</comision>
+</empleado>
+<empleado>
+<codigo>3</codigo>
+<nombre>Carmen</nombre>
+<direccion>Calle 3</direccion>
+<salario>1800.0</salario>
+<comision>150.0</comision>
+</empleado>
+<empleado>
+<codigo>4</codigo>
+<nombre>Miguel</nombre>
+<direccion>Calle 4</direccion>
+<salario>2900.4</salario>
+<comision>0.0</comision>
+</empleado>
+<empleado>
+<codigo>5</codigo>
+<nombre>Sara</nombre>
+<direccion>Calle 5</direccion>
+<salario>3100.9</salario>
+<comision>180.5</comision>
+</empleado>
+</empleados>
