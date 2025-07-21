@@ -1,0 +1,41 @@
+-J-Duser.language=
+-J-Duser.country=
+@options
+@packages
+-encoding
+'UTF-8'
+-protected
+-source
+'1.8'
+-sourcepath
+'C:/Users/MCCLA/Documents/NetBeansProjects/aleatorios/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2024. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'C:/Users/MCCLA/Documents/NetBeansProjects/aleatorios/target/reports/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'aleatorios 1.0-SNAPSHOT API'
+-linkoffline
+'https://docs.oracle.com/javase/8/docs/api' 'C:/Users/MCCLA/Documents/NetBeansProjects/aleatorios/target/javadoc-bundle-options'
+-use
+-version
+-windowtitle
+'aleatorios 1.0-SNAPSHOT API'
+com.mycompany.aleatorios
+C:\Users\MCCLA\Documents\NetBeansProjects\aleatorios\src\main\java = 1728918529154
+C:\Users\MCCLA\Documents\NetBeansProjects\aleatorios\target\reports\apidocs\allclasses-frame.html = 1731946595289
+C:\Users\MCCLA\Documents\NetBeansProjects\aleatorios\target\reports\apidocs\allclasses-noframe.html = 1731946595305
+C:\Users\MCCLA\Documents\NetBeansProjects\aleatorios\target\reports\apidocs\constant-values.html = 1731946595242
+C:\Users\MCCLA\Documents\NetBeansProjects\aleatorios\target\reports\apidocs\deprecated-list.html = 1731946595273
+C:\Users\MCCLA\Documents\NetBeansProjects\aleatorios\target\reports\apidocs\help-doc.html = 1731946595320
+C:\Users\MCCLA\Documents\NetBeansProjects\aleatorios\target\reports\apidocs\index-all.html = 1731946595273
+C:\Users\MCCLA\Documents\NetBeansProjects\aleatorios\target\reports\apidocs\index.html = 1731946595320
+C:\Users\MCCLA\Documents\NetBeansProjects\aleatorios\target\reports\apidocs\overview-tree.html = 1731946595258
+C:\Users\MCCLA\Documents\NetBeansProjects\aleatorios\target\reports\apidocs\package-list = 1731946595195
+C:\Users\MCCLA\Documents\NetBeansProjects\aleatorios\target\reports\apidocs\script.js = 1731946595336
+C:\Users\MCCLA\Documents\NetBeansProjects\aleatorios\target\reports\apidocs\stylesheet.css = 1731946595320

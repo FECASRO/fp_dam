@@ -1,0 +1,41 @@
+-J-Duser.language=
+-J-Duser.country=
+@options
+@packages
+-encoding
+'UTF-8'
+-protected
+-source
+'1.8'
+-sourcepath
+'C:/Users/MCCLA/Documents/NetBeansProjects/ordenarNumeros/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2024. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'C:/Users/MCCLA/Documents/NetBeansProjects/ordenarNumeros/target/reports/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'ordenarNumeros 1.0-SNAPSHOT API'
+-linkoffline
+'https://docs.oracle.com/javase/8/docs/api' 'C:/Users/MCCLA/Documents/NetBeansProjects/ordenarNumeros/target/javadoc-bundle-options'
+-use
+-version
+-windowtitle
+'ordenarNumeros 1.0-SNAPSHOT API'
+com.mycompany.ordenarnumeros
+C:\Users\MCCLA\Documents\NetBeansProjects\ordenarNumeros\src\main\java = 1727882072962
+C:\Users\MCCLA\Documents\NetBeansProjects\ordenarNumeros\target\reports\apidocs\allclasses-frame.html = 1731947648079
+C:\Users\MCCLA\Documents\NetBeansProjects\ordenarNumeros\target\reports\apidocs\allclasses-noframe.html = 1731947648079
+C:\Users\MCCLA\Documents\NetBeansProjects\ordenarNumeros\target\reports\apidocs\constant-values.html = 1731947648001
+C:\Users\MCCLA\Documents\NetBeansProjects\ordenarNumeros\target\reports\apidocs\deprecated-list.html = 1731947648064
+C:\Users\MCCLA\Documents\NetBeansProjects\ordenarNumeros\target\reports\apidocs\help-doc.html = 1731947648110
+C:\Users\MCCLA\Documents\NetBeansProjects\ordenarNumeros\target\reports\apidocs\index-all.html = 1731947648032
+C:\Users\MCCLA\Documents\NetBeansProjects\ordenarNumeros\target\reports\apidocs\index.html = 1731947648079
+C:\Users\MCCLA\Documents\NetBeansProjects\ordenarNumeros\target\reports\apidocs\overview-tree.html = 1731947648017
+C:\Users\MCCLA\Documents\NetBeansProjects\ordenarNumeros\target\reports\apidocs\package-list = 1731947647954
+C:\Users\MCCLA\Documents\NetBeansProjects\ordenarNumeros\target\reports\apidocs\script.js = 1731947648126
+C:\Users\MCCLA\Documents\NetBeansProjects\ordenarNumeros\target\reports\apidocs\stylesheet.css = 1731947648110

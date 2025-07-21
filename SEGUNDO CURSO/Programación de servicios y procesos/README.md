@@ -1,6 +1,6 @@
  # Programación de Servicios y Procesos – Índice de Temas
   
-  Este repositorio contiene los ejercicios prácticos de los distintos temas de la asignatura de Programación del primer curso del ciclo formativo DAM.
+  Este repositorio contiene los ejercicios prácticos de los distintos temas de la asignatura de Programación de servicios y procesos del segundo curso del ciclo formativo DAM.
   
   ## 🛠️ Tecnologías utilizadas
   

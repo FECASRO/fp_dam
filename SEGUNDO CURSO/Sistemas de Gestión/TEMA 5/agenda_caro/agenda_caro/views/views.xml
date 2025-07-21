@@ -1,0 +1,44 @@
+<odoo>
+    <data>
+
+        <!-- Vista Tree (Lista) -->
+        <record id="view_agenda_caro_tree" model="ir.ui.view">
+            <field name="name">agenda_caro.agenda_caro.tree</field>
+            <field name="model">agenda_caro.agenda_caro</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="nombre"/>
+                    <field name="telefono"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Vista Form (Formulario) -->
+        <record id="view_agenda_caro_form" model="ir.ui.view">
+            <field name="name">agenda_caro.agenda_caro.form</field>
+            <field name="model">agenda_caro.agenda_caro</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="nombre"/>
+                            <field name="telefono"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Acción de ventana -->
+        <record id="action_agenda_caro" model="ir.actions.act_window">
+            <field name="name">Agenda Telefónica</field>
+            <field name="res_model">agenda_caro.agenda_caro</field>
+            <field name="view_mode">tree,form</field>
+            <field name="target">current</field>
+        </record>
+
+        <!-- Menú para agregar la agenda al menú de Contactos -->
+        <menuitem id="agenda_caro_menu" name="Agenda Telefónica" parent="contacts.menu_contacts" action="action_agenda_caro"/>
+
+    </data>
+</odoo>

@@ -1,0 +1,41 @@
+-J-Duser.language=
+-J-Duser.country=
+@options
+@packages
+-encoding
+'UTF-8'
+-protected
+-source
+'1.8'
+-sourcepath
+'C:/Users/MCCLA/Documents/NetBeansProjects/lenguaje/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2024. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'C:/Users/MCCLA/Documents/NetBeansProjects/lenguaje/target/reports/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'lenguaje 1.0-SNAPSHOT API'
+-linkoffline
+'https://docs.oracle.com/javase/8/docs/api' 'C:/Users/MCCLA/Documents/NetBeansProjects/lenguaje/target/javadoc-bundle-options'
+-use
+-version
+-windowtitle
+'lenguaje 1.0-SNAPSHOT API'
+com.mycompany.lenguaje
+C:\Users\MCCLA\Documents\NetBeansProjects\lenguaje\src\main\java = 1731743624529
+C:\Users\MCCLA\Documents\NetBeansProjects\lenguaje\target\reports\apidocs\allclasses-frame.html = 1731946922159
+C:\Users\MCCLA\Documents\NetBeansProjects\lenguaje\target\reports\apidocs\allclasses-noframe.html = 1731946922159
+C:\Users\MCCLA\Documents\NetBeansProjects\lenguaje\target\reports\apidocs\constant-values.html = 1731946922065
+C:\Users\MCCLA\Documents\NetBeansProjects\lenguaje\target\reports\apidocs\deprecated-list.html = 1731946922128
+C:\Users\MCCLA\Documents\NetBeansProjects\lenguaje\target\reports\apidocs\help-doc.html = 1731946922175
+C:\Users\MCCLA\Documents\NetBeansProjects\lenguaje\target\reports\apidocs\index-all.html = 1731946922112
+C:\Users\MCCLA\Documents\NetBeansProjects\lenguaje\target\reports\apidocs\index.html = 1731946922159
+C:\Users\MCCLA\Documents\NetBeansProjects\lenguaje\target\reports\apidocs\overview-tree.html = 1731946922112
+C:\Users\MCCLA\Documents\NetBeansProjects\lenguaje\target\reports\apidocs\package-list = 1731946921987
+C:\Users\MCCLA\Documents\NetBeansProjects\lenguaje\target\reports\apidocs\script.js = 1731946922190
+C:\Users\MCCLA\Documents\NetBeansProjects\lenguaje\target\reports\apidocs\stylesheet.css = 1731946922190

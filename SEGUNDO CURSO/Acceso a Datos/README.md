@@ -1,6 +1,6 @@
 # Acceso a Datos – Índice de Temas
   
-  Este repositorio contiene los ejercicios prácticos de los distintos temas de la asignatura de Programación del primer curso del ciclo formativo DAM.
+  Este repositorio contiene los ejercicios prácticos de los distintos temas de la asignatura de Acceso a datos del segundo curso del ciclo formativo DAM.
   
   ## 🛠️ Tecnologías utilizadas
   
