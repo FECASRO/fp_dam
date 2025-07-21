@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Estructura de Archivos en JavaHelp</title>
+</head>
+<body>
+    <h1>Estructura de Archivos en JavaHelp</h1>
+    <p>JavaHelp utiliza varios archivos XML para definir la navegación, el índice y la configuración del sistema de ayuda.</p>
+</body>
+<script>
+function buscarTexto(palabra) {
+    var bodyText = document.body.innerHTML;
+    var regex = new RegExp("(" + palabra + ")", "gi");
+    document.body.innerHTML = bodyText.replace(regex, '<span style="background-color: yellow;">$1</span>');
+}
+</script>
+</html>

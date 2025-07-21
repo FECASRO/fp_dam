@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="612f12a3-696e-47d4-9c4f-ba9e44cd01ba">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="ID_Cliente" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT 
+        p.ID_Pedido, 
+        p.Fecha_Pedido, 
+        SUM(dp.Unidades * dp.Precio) AS Importe_Pagar
+    FROM pedidos p
+    JOIN detalle_pedidos dp ON p.ID_Pedido = dp.ID_Pedido
+    WHERE p.ID_Cliente = $P{ID_Cliente}  -- Parámetro en JasperReports
+    GROUP BY p.ID_Pedido, p.Fecha_Pedido
+    ORDER BY p.Fecha_Pedido;]]>
+	</queryString>
+	<field name="ID_Pedido" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Fecha_Pedido" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Importe_Pagar" class="java.math.BigDecimal"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<textField>
+				<reportElement x="179" y="0" width="203" height="43" uuid="b4c5ef01-55ef-4296-986b-b5bedd51a8de"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA["DETALLE FACTURA"]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="20" uuid="4d19ba3c-124e-49fb-a7ac-6c530699e9a1"/>
+				<text><![CDATA[ID_Pedido]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="20" width="100" height="20" uuid="a2876eac-a078-418e-a0d1-496a9a82db47"/>
+				<textFieldExpression><![CDATA[$F{ID_Pedido}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="145" y="0" width="100" height="20" uuid="1cb68036-4626-4fa9-9e95-ff23454ddddf"/>
+				<text><![CDATA[Fecha_Pedido]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="145" y="20" width="100" height="20" uuid="a6230bed-c0e0-47f3-b814-39ea80c48862"/>
+				<textFieldExpression><![CDATA[new java.text.SimpleDateFormat("dd/MM/yyyy").format($F{Fecha_Pedido})]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="343" y="0" width="100" height="20" uuid="70bdc907-c1c6-4a98-89a1-2d46e67394e6"/>
+				<text><![CDATA[Importe_Pagar]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="343" y="20" width="100" height="20" uuid="1a69954c-a103-44ae-8f7d-95cd04c88e93"/>
+				<textFieldExpression><![CDATA[$F{Importe_Pagar}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

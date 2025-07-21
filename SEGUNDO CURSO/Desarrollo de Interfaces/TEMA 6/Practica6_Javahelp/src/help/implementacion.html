@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Implementación en una Aplicación Java</title>
+</head>
+<body>
+    <h1>Implementación en una Aplicación Java</h1>
+    <p>Se debe cargar el sistema de ayuda dentro de una aplicación mediante el uso de la API de JavaHelp.</p>
+</body>
+<script>
+function buscarTexto(palabra) {
+    var bodyText = document.body.innerHTML;
+    var regex = new RegExp("(" + palabra + ")", "gi");
+    document.body.innerHTML = bodyText.replace(regex, '<span style="background-color: yellow;">$1</span>');
+}
+</script>
+</html>

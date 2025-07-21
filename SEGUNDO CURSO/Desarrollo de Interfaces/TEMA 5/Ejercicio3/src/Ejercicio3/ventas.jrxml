@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a617159e-5059-4a7a-83a2-61eabdec801a">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="230"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT 
+    a.Descripcion AS Articulo, 
+    SUM(dp.Unidades) AS Total_Unidades_Vendidas
+FROM articulos a
+JOIN detalle_pedidos dp ON a.Id_articulo = dp.ID_Articulo
+GROUP BY a.Id_articulo
+ORDER BY Total_Unidades_Vendidas DESC;]]>
+	</queryString>
+	<field name="Articulo" class="java.lang.String"/>
+	<field name="Total_Unidades_Vendidas" class="java.math.BigDecimal"/>
+	<group name="Articulo">
+		<groupExpression><![CDATA[$F{Articulo}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="40" y="14" width="479" height="51" uuid="db2b059f-1a43-4985-9ce5-9a89a41032b2"/>
+				<textElement textAlignment="Center">
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[Informe de Ventas Totales por Artículo]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="39" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="189" height="20" uuid="f8839ded-0ac0-4d3a-9c00-a69ca49419de"/>
+				<text><![CDATA[Articulo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="189" y="0" width="74" height="35" uuid="2c73e02e-1038-4a7a-b458-0923c53f040c"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Total_Unidades_Vendidas]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="23" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="189" height="20" uuid="314e7776-2df7-4e11-a115-3911d7e0dae5"/>
+				<textFieldExpression><![CDATA[$F{Articulo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="189" y="0" width="74" height="20" uuid="3508a410-2089-4efc-8739-835f2bcf0bb5"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{Total_Unidades_Vendidas}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="20" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="292" splitType="Stretch">
+			<barChart>
+				<chart>
+					<reportElement x="0" y="0" width="555" height="292" uuid="e4292772-a10a-4363-8581-f75ae639fddd"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<categoryDataset>
+					<categorySeries>
+						<seriesExpression><![CDATA[""]]></seriesExpression>
+						<categoryExpression><![CDATA[$F{Articulo}]]></categoryExpression>
+						<valueExpression><![CDATA[$F{Total_Unidades_Vendidas}]]></valueExpression>
+					</categorySeries>
+				</categoryDataset>
+				<barPlot>
+					<plot labelRotation="45.0"/>
+					<itemLabel/>
+					<categoryAxisFormat labelRotation="45.0">
+						<axisFormat verticalTickLabels="false"/>
+					</categoryAxisFormat>
+					<valueAxisFormat>
+						<axisFormat/>
+					</valueAxisFormat>
+				</barPlot>
+			</barChart>
+		</band>
+	</summary>
+</jasperReport>

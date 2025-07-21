@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2c7486a4-aad2-4c31-910a-6cea9e629b9a">
+    <property name="ireport.zoom" value="1.0"/>
+    <property name="ireport.x" value="0"/>
+    <property name="ireport.y" value="0"/>
+    <parameter name="ID_Cliente" class="java.lang.Integer"/>
+    <parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+        <defaultValueExpression><![CDATA["C:\\Users\\MCCLA\\Documents\\netbeans 8.2\\Ejercicio4\\src\\ejercicio4\\"]]></defaultValueExpression>
+    </parameter>
+    <queryString>
+		<![CDATA[SELECT 
+    ID_Cliente, 
+    Nombre, 
+    Direccion, 
+    Ciudad 
+FROM clientes;]]>
+    </queryString>
+    <field name="ID_Cliente" class="java.lang.Integer">
+        <fieldDescription><![CDATA[]]></fieldDescription>
+    </field>
+    <field name="Nombre" class="java.lang.String">
+        <fieldDescription><![CDATA[]]></fieldDescription>
+    </field>
+    <field name="Direccion" class="java.lang.String">
+        <fieldDescription><![CDATA[]]></fieldDescription>
+    </field>
+    <field name="Ciudad" class="java.lang.String">
+        <fieldDescription><![CDATA[]]></fieldDescription>
+    </field>
+    <background>
+        <band splitType="Stretch"/>
+    </background>
+    <title>
+        <band height="79" splitType="Stretch">
+            <textField>
+                <reportElement x="0" y="0" width="555" height="55" uuid="50e59a58-049e-4bf2-8f1b-6c74325665af"/>
+                <textElement textAlignment="Center">
+                    <font size="24"/>
+                </textElement>
+                <textFieldExpression><![CDATA["Facturas clientes"]]></textFieldExpression>
+            </textField>
+        </band>
+    </title>
+    <detail>
+        <band height="125" splitType="Stretch">
+            <staticText>
+                <reportElement x="10" y="0" width="67" height="20" uuid="51262d6e-1fef-46bc-8728-045f331a7245"/>
+                <text><![CDATA[ID_Cliente]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="10" y="35" width="67" height="20" uuid="e5b4a4a6-78e9-4cc1-8f77-4c4afc9da002"/>
+                <textFieldExpression><![CDATA[$F{ID_Cliente}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="103" y="0" width="155" height="20" uuid="e696729f-4fc9-4ec5-bb55-ff5216912b7c"/>
+                <text><![CDATA[Nombre]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="103" y="35" width="155" height="20" uuid="b767ac75-7468-460f-b4f7-b012d3eebf48"/>
+                <textFieldExpression><![CDATA[$F{Nombre}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="258" y="0" width="186" height="20" uuid="15c94612-d62d-42f4-bfab-f2a489f921ae"/>
+                <text><![CDATA[Direccion]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="258" y="35" width="186" height="20" uuid="d47552ec-fe47-4612-a594-bd2776011003"/>
+                <textFieldExpression><![CDATA[$F{Direccion}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="444" y="0" width="111" height="20" uuid="098b4564-cf3b-4e15-9d87-855db3b01e3c"/>
+                <text><![CDATA[Ciudad]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="444" y="35" width="111" height="20" uuid="5e8a9e79-3fcb-4f0d-a0c3-75516a44cb66"/>
+                <textFieldExpression><![CDATA[$F{Ciudad}]]></textFieldExpression>
+            </textField>
+        </band>
+    </detail>
+    <columnFooter>
+        <band height="45" splitType="Stretch">
+            <subreport>
+                <reportElement x="0" y="0" width="535" height="100" uuid="d7e7e5fe-c309-4a15-a582-c7fe2d9d1b55"/>
+                <subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "subfacturas.jasper"]]></subreportExpression>
+            </subreport>
+        </band>
+    </columnFooter>
+</jasperReport>
