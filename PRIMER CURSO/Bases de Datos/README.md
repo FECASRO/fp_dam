@@ -12,7 +12,7 @@
   
   ## 📁 Temas
   
-  - ![🗂️](https://img.shields.io/badge/TEMA%101-darkgreen?style=flat-square) [TEMA 2](./TEMA%101)
-  - ![🗂️](https://img.shields.io/badge/TEMA%104-darkgreen?style=flat-square) [TEMA 4](./TEMA%104)
-  - ![🗂️](https://img.shields.io/badge/TEMA%105-darkgreen?style=flat-square) [TEMA 5](./TEMA%105)
+  - ![🗂️](https://img.shields.io/badge/TEMA%202-darkgreen?style=flat-square) [TEMA 2](./TEMA%202)
+  - ![🗂️](https://img.shields.io/badge/TEMA%204-darkgreen?style=flat-square) [TEMA 4](./TEMA%204)
+  - ![🗂️](https://img.shields.io/badge/TEMA%205-darkgreen?style=flat-square) [TEMA 5](./TEMA%205)
   
