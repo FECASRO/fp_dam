@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<!DOCTYPE modulodam[
+	
+	<!ELEMENT titulo (encabezado)>
+
+	<!ELEMENT encabezado EMPTY>
+		<!ATTLIST encabezado modulo CDATA #REQUIRED>
+		<!ATTLIST encabezado horasmodulo CDATA #REQUIRED>
+		<!ATTLIST encabezado fechas CDATA #REQUIRED>
+		<!ATTLIST encabezado numalum CDATA #REQUIRED>
+	
+	<!ELEMENT alumno EMPTY>
+	<!ATTLIST alumno nombre CDATA #REQUIRED>
+	<!ATTLIST apellidos CDATA #REQUIRED>
+	<!ATTLIST dni CDATA #REQUIRED>
+	<!ATTLIST tlfno CDATA #REQUIRED>
+	<!ATTLIST email CDATA #REQUIRED>
+	
+	
+		<!ELEMENT direccion EMPTY>
+		<!ATTLIST direccion calle CDATA #REQUIRED>
+		<!ATTLIST direccion cp CDATA #REQUIRED>
+		<!ATTLIST direccion ciudad CDATA #REQUIRED>
+
+	
+	
+	<!ELEMENT academico EMPTY>
+		<!ATTLIST academico faltas CDATA #REQUIRED>
+		<!ATTLIST academico notafinal CDATA #REQUIRED>
+]>
+
+<titulo>
+	<encabezado modulo=" Modulo de Lenguajes de Marcas y Sistemas de Gestion de Informacion "/>
+	<encabezado fechas=" Entre el 15 de septiembre de 2010 y el 30 de junio de 2011" horasmodulo=" 4 horas semanales"/>
+	<encabezado numalum=" Numero actual de matriculados 2 " /> 
+
+	
+		<alumno nombre="Ana" apellidos="Fernández Gutiérrez" dni=" 16965696L" />
+		<direccion calle="C/ El Percebe, 13" ciudad="Santander" cp="39302" />
+		<alumno tlfno=" numero tlfno 789654321" email="ana.fdezgtrrez@hotmail.com" />
+
+		<academico faltas=" sin datos " notas="sin datos" />
+
+		<alumno nombre="Pepito " apellidos="Grillo" dni=" 98765432H" />
+		<direccion calle="Avd. El Pez 5" ciudad="Suances" cp="39401" />
+		<telefono=" Nº Telefono 656566555 " email="yhyh@yahoo.com" />
+
+		<academico faltas=" sin faltas " notas="Apto" />
+		
+		
+
+	

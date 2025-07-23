@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE recetario [ 
+	
+	<!ELEMENT receta (ingrediente+)> 
+	<!ELEMENT encabezado EMPTY> 
+	<!ATTLIST encabezado nombrereceta ID #REQUIRED> 
+	<!ATTLIST ingrediente comensales ID #REQUIRED> 
+	
+	<!ELEMENT paso (#PCDATA)>
+	
+	<!ELEMENT ingrediente EMPTY> 
+	<!ATTLIST ingrediente nombre ID #REQUIRED> 
+	<!ATTLIST ingrediente cantidad CDATA #REQUIRED> 
+	
+	<!ELEMENT proceso EMPTY> 
+	<!ATTLIST proceso numero CDATA #REQUIRED> 
+	<!ATTLIST proceso explicacion CDATA #REQUIRED> 
+]> 
+ 
+<receta> 
+	<encabezado nombrereceta="Sopa de cebolla" comensales="(4 personas)"/>
+	
+
+	<paso>Ingredientes:</paso>
+	
+
+	<ingrediente cantidad="1 Kg" nombre="de cebollas"  ></ingrediente> 
+	<ingrediente cantidad="2 litros" nombre="de caldo de carne"></ingrediente> 
+	<ingrediente cantidad="100gr." nombre="mantequilla"  ></ingrediente> 
+	<ingrediente cantidad="1 cucharada" nombre="de harina"></ingrediente> 
+	<ingrediente cantidad="100gr." nombre="queso emental suizo o gruyere"  ></ingrediente> 
+	<ingrediente cantidad="rebanadas" nombre="pan tostado"></ingrediente> 
+	<ingrediente cantidad="pizco" nombre="tomillo"  ></ingrediente> 
+	<ingrediente cantidad="1 hoja" nombre="de laurel"></ingrediente> 
+	<ingrediente cantidad="pizco" nombre="de pimienta"></ingrediente> 
+
+	<paso>Proceso</paso>
+
+	<proceso numero="PRIMERO:" explicacion="Pelar y partir las cebollas en rodajas finas."/>
+	<proceso numero="SEGUNDO:" explicacion="Rehogarlas con la mantequilla, sal y pimienta a fuego lento hasta que esten transparentes sin dorarse."/>
+	<proceso numero="TERCERO:" explicacion="Añadir la harina sin dejar de remover."/>
+	<proceso numero="CUARTO:" explicacion="Ponerlo en una cazuela con el caldo, el tomillo y el laurel."/>
+	<proceso numero="QUINTO:" explicacion="Dejar cocer a fuego lento durante unos 15 minutos."/>
+	<proceso numero="QUINTO:" explicacion="Poner las rebanadas de pan encima, espolvorear el queso y gratinar al horno."/>
+</receta>

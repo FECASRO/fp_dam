@@ -1,0 +1,20 @@
+<!DOCTYPE torneo [
+
+<!ELEMENT torneo (participante+)>
+    <!ELEMENT edicion (#PCDATA)>
+    <!ELEMENT anteriorGanador (#PCDATA)>
+          
+        <!ATTLIST torneo edicion CDATA #REQUIRED>
+        <!ATTLIST torneo anteriorGanador CDATA #REQUIRED>        
+     
+<!ELEMENT participante (nombre, edad, pais, cabezaDeSerie?)>
+      <!ELEMENT nombre (#PCDATA)>
+      <!ELEMENT edad (#PCDATA)>
+      <!ELEMENT pais (#PCDATA)>
+      <!ELEMENT cabezaDeSerie (#PCDATA)>
+      
+      <!ATTLIST participante idP CDATA #REQUIRED>
+      <!ATTLIST participante pareja CDATA #REQUIRED>
+  
+        
+    ]>

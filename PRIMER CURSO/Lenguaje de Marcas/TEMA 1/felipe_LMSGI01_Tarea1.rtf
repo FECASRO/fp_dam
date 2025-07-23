@@ -1,0 +1,214 @@
+{\rtf1\ansi\deff0{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\colortbl ;\red255\green0\blue0;\red0\green77\blue187;}
+{\*\generator Msftedit 5.41.21.2510;}\viewkind4\uc1\pard\sa200\sl276\slmult1\cf1\lang10\f0\fs22 TAREA 1\par
+\cf0\par
+\par
+\cf1 1A\cf0  -- Unica respuesta que se me ocurre en este caso seria considerar <elemento> como raiz \par
+      aplicandole de esta forma la siguiente norma :\par
+       En todo documento XML debe existir un elemento ra\'edz, y s\'f3lo uno.\par
+\par
+\cf1 1B\cf0  -- Etiquetas siempre en minusculas\par
+\par
+\cf1 1C\cf0  -- Al anidar elementos no puede cerrarse un elemento que contenga alg\'fan otro \par
+      elemento que a\'fan no se haya cerrado.\par
+\par
+\cf1 1D\cf0  -- En el contenido de los elementos no se pueden utilizar directamente los caracteres mayor \par
+      que, >, menor que, <, ampersand, &, dobles comillas, ", y apostrofe, \lquote . En el caso de\par
+      tener que utilizar\par
+      estos caracteres se sustituyen por las siguientes cadenas:\par
+\par
+\tab\tab\tab\par
+\tab\tab\tab\tab Car\'e1cter\tab Cadena\par
+\tab\tab\tab\tab\tab\par
+\tab\tab\tab\tab     >\tab           &gt;\par
+\tab\tab\tab\tab     <\tab           &lt;\par
+\tab\tab\tab\tab     &\tab          &amp;\par
+\tab\tab\tab\tab     "\tab         &quot;\par
+\tab\tab\tab\tab     '\tab         &apos;\par
+\par
+\cf1 1E\cf0  -- NINGUNA ETIQUETA CONTENDRA EN SU INICIO LA CADENA XML EN NINGUNA DE SUS VERSIONES\par
+\par
+\cf1 1F\cf0  -- El contenido de los elementos no puede contener la cadena "]]>" por compatibilidad con SGML\par
+\par
+\cf1 1G\cf0  -- LA ETIQUETA DE CIERRE ES DIFERENTE DE LA DE APERTURA\par
+\par
+\cf1 1H\cf0  -- EL CIERRE DE ETIQUETA SUBRAYADO ES INCORRECTO LE FALTA " / "\par
+\par
+\par
+\cf1 EJERCICIO 2\par
+\cf0\par
+<?xml version="1.0" encoding="UTF-8"?>\par
+<!DOCTYPE agenda [\par
+\par
+\tab <!ELEMENT agenda (contacto)>\par
+\tab <!ELEMENT contacto ANY>\par
+\tab <!ELEMENT nombre (#PCDATA)>\par
+\tab <!ELEMENT apellido (#PCDATA)>\par
+\tab <!ELEMENT apellidob (#PCDATA)>\par
+\tab <!ELEMENT telefonofijo (a|fijo?)>\par
+\tab <!ELEMENT a EMPTY>\par
+\tab <!ELEMENT fijo (#PCDATA)>\par
+\tab <!ELEMENT telefonomovil (#PCDATA)>\par
+\tab <!ELEMENT emilio (a|mail?)>\par
+\tab <!ELEMENT mail (#PCDATA)>\par
+\tab\par
+\tab\par
+]>\par
+\par
+<agenda>\par
+\tab <contacto>\par
+\tab\tab <nombre> felipe </nombre>\par
+\tab\tab <nombre> pedro </nombre>\par
+\tab\tab <apellido>Castillo</apellido>\par
+\tab\tab <apellidob>Rodriguez</apellidob>\par
+\tab\tab <telefonofijo><fijo>923262626</fijo></telefonofijo>\par
+\tab\tab <telefonomovil>657575757</telefonomovil>\par
+\tab\tab <emilio><mail>M.C.CLAUD1@HOTMAIL.COM</mail></emilio>\par
+\par
+\tab </contacto>\par
+\par
+\tab <contacto>\par
+\tab\tab <nombre> Pedro </nombre>\par
+\tab\tab <apellido> Hernandez</apellido>\par
+\tab\tab <apellidob>sanchez</apellidob>\par
+\tab\tab <telefonofijo><a></a></telefonofijo>\par
+\tab\tab <telefonomovil>983262626</telefonomovil>\par
+\tab\tab <emilio><mail>PHernandezSan@Gmail.com</mail></emilio>\par
+\par
+\tab </contacto>\par
+</agenda>\par
+\par
+\par
+\cf2 JUSTIFICACION --\cf0\par
+\par
+He creado una agenda lo mas simple posible definiendo cada contacto con sus campos como nuevos elementos \par
+de la agenda\par
+\par
+En la notacion contacto decidi poner ANY, por si en un futuro se quisiese implementar dicha agenda\par
+a\'f1adiendo por ejemplo foto de contacto o cualquier otro dato que fuese diferente del resto.\par
+\par
+Posteriormente en telefono fijo y direccion de correo electronico, quise experimentar con las etiquetas\par
+la posibilidad de que un dato o campo apareciera o no , puesto que no todo el mundo en la actualidad\par
+cuenta con un telefono fijo o desea dar su direccion de correo electronico.Incluso en ocasiones al crear\par
+una aplicacion deberemos dejar opciones de eleccion.\par
+\par
+Finalmente creo que el proposito del ejercicio en si lo cumpli, pero destacaria sobre todo, la labor de \par
+busqueda y aprendizaje que he tenido que hacer para comprender mejor todo el tema que engloba el DTD y \par
+como funciona con respecto a las simples etiquetas que puse al inicio y tambien cumpliar la labor, eso si \par
+de manera mas incompleta.\par
+\par
+\par
+\cf1 PREGUNTA 3\par
+\cf0\par
+<?xml version="1.0" encoding="UTF-8"?> \par
+<!DOCTYPE recetario [ \par
+\tab\par
+\tab <!ELEMENT receta (ingrediente+)> \par
+\tab <!ELEMENT encabezado EMPTY> \par
+\tab <!ATTLIST encabezado nombrereceta ID #REQUIRED> \par
+\tab <!ATTLIST ingrediente comensales ID #REQUIRED> \par
+\tab\par
+\tab <!ELEMENT paso (#PCDATA)>\par
+\tab\par
+\tab <!ELEMENT ingrediente EMPTY> \par
+\tab <!ATTLIST ingrediente nombre ID #REQUIRED> \par
+\tab <!ATTLIST ingrediente cantidad CDATA #REQUIRED> \par
+\tab\par
+\tab <!ELEMENT proceso EMPTY> \par
+\tab <!ATTLIST proceso numero CDATA #REQUIRED> \par
+\tab <!ATTLIST proceso explicacion CDATA #REQUIRED> \par
+]> \par
+ \par
+<receta> \par
+\tab <encabezado nombrereceta="Sopa de cebolla" comensales="(4 personas)"/>\par
+\tab\par
+\par
+\tab <paso>Ingredientes:</paso>\par
+\tab\par
+\par
+\tab <ingrediente cantidad="1 Kg" nombre="de cebollas"  ></ingrediente> \par
+\tab <ingrediente cantidad="2 litros" nombre="de caldo de carne"></ingrediente> \par
+\tab <ingrediente cantidad="100gr." nombre="mantequilla"  ></ingrediente> \par
+\tab <ingrediente cantidad="1 cucharada" nombre="de harina"></ingrediente> \par
+\tab <ingrediente cantidad="100gr." nombre="queso emental suizo o gruyere"  ></ingrediente> \par
+\tab <ingrediente cantidad="rebanadas" nombre="pan tostado"></ingrediente> \par
+\tab <ingrediente cantidad="pizco" nombre="tomillo"  ></ingrediente> \par
+\tab <ingrediente cantidad="1 hoja" nombre="de laurel"></ingrediente> \par
+\tab <ingrediente cantidad="pizco" nombre="de pimienta"></ingrediente> \par
+\par
+\tab <paso>Proceso</paso>\par
+\par
+\tab <proceso numero="PRIMERO:" explicacion="Pelar y partir las cebollas en rodajas finas."/>\par
+\tab <proceso numero="SEGUNDO:" explicacion="Rehogarlas con la mantequilla, sal y pimienta a fuego lento hasta que esten transparentes sin dorarse."/>\par
+\tab <proceso numero="TERCERO:" explicacion="A\'f1adir la harina sin dejar de remover."/>\par
+\tab <proceso numero="CUARTO:" explicacion="Ponerlo en una cazuela con el caldo, el tomillo y el laurel."/>\par
+\tab <proceso numero="QUINTO:" explicacion="Dejar cocer a fuego lento durante unos 15 minutos."/>\par
+\tab <proceso numero="QUINTO:" explicacion="Poner las rebanadas de pan encima, espolvorear el queso y gratinar al horno."/>\par
+</receta>\par
+\par
+\par
+\cf2 JUSTIFICACION DEL EJERCICIO \cf0 -- Tras definir todos los elementos que intervienen cree diferentes listas y dentro de estas asigne id \par
+a los elementos que posteriormente utilizaremos para encontrar la receta , nombre de la receta, comensales, e ingredientes\par
+tuve problemas iniciales porque al poner encoding UTF-8 luego lo guardaba sin darme cuenta como ANSI, solventada esta question mas o\par
+menos pienso que el objetivo esta conseguido.\par
+\par
+\par
+\cf1 TAREA 4\par
+\cf0\par
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>\par
+<!DOCTYPE modulodam[\par
+\par
+<!ELEMENT encabezado EMPTY>\par
+\tab\tab <!ATTLIST encabezado modulo CDATA #REQUIRED>\par
+\tab\tab <!ATTLIST encabezado horasmodulo CDATA #REQUIRED>\par
+\tab\tab <!ATTLIST encabezado fechas CDATA #REQUIRED>\par
+\tab\tab <!ATTLIST encabezado numalum CDATA #REQUIRED>\par
+<!ELEMENT alumno EMPTY>\par
+\tab <!ATTLIST alumno nombre CDATA #REQUIRED>\par
+\tab <!ATTLIST alumno apellidos CDATA #REQUIRED>\par
+\tab <!ATTLIST alumno dni CDATA #REQUIRED>\par
+\tab <!ATTLIST alumno movil CDATA #REQUIRED>\par
+\tab <!ATTLIST alumno email CDATA #REQUIRED>\par
+<!ELEMENT direccion EMPTY>\par
+\tab\tab <!ATTLIST direccion calle CDATA #REQUIRED>\par
+\tab\tab <!ATTLIST direccion cp CDATA #REQUIRED>\par
+\tab\tab <!ATTLIST direccion ciudad CDATA #REQUIRED>\par
+<!ELEMENT academico EMPTY>\par
+\tab\tab <!ATTLIST academico faltas CDATA #REQUIRED>\par
+\tab\tab <!ATTLIST academico notafinal CDATA #REQUIRED>\par
+]>\par
+\par
+<titulo>\par
+\tab <encabezado modulo=" Modulo de Lenguajes de Marcas y Sistemas de Gestion de Informacion "/>\par
+\tab <encabezado fechas=" Entre el 15 de septiembre de 2010 y el 30 de junio de 2011" horasmodulo=" 4 horas semanales"/>\par
+\tab <encabezado numalum=" Numero actual de matriculados 2 " /> \par
+\par
+\tab <matriculado>\par
+\tab\tab <alumno nombre="Ana" apellidos="Fernandez Gutierrez" dni=" 16965696L" />\par
+\tab\tab <direccion calle="C/ El Percebe, 13" ciudad="Santander" cp="39302" />\par
+\tab\tab <alumno movil="789654321" email="ana.fdezgtrrez@hotmail.com" />\par
+\par
+\tab\tab <academico faltas=" sin datos " notas="sin datos" />\par
+</matriculado>\par
+<matriculado>\par
+\tab\tab <alumno nombre="Pepito " apellidos="Grillo" dni=" 98765432H" />\par
+\tab\tab <direccion calle="Avd. El Pez 5" ciudad="Suances" cp="39401" />\par
+\tab\tab <alumno movil="656566555" email="yhyh@yahoo.com"  />\par
+\par
+\tab\tab <academico faltas=" sin faltas " notas="Apto" />\par
+</matriculado>\tab\tab\par
+\tab\tab\par
+</titulo>\par
+\par
+\par
+\par
+\cf2 JUSTIFICACION\cf0  -- He usado diferentes listas porque me parece la manera mas sencilla de mantener\par
+agrupados los datos de manera mas organizada, en peque\'f1os grupos puede resultar mas aparatoso visualmente\par
+hablando pero cada dato tiene su grupo, por primera vez en este ejercicio he utilizado standalone\par
+quizas en algunas de las tareas me he metido en charcos poco necesarios,con aciertos y errores supongo\par
+pero al fin y al cabo no estoy buscando lo mas sencillo sino practicar diferentes cosas con las\par
+informaciones que he ido encontrando e intentar buscar mi propio enfoque en cada una de las tareas\par
+  \par
+\par
+}
+ 

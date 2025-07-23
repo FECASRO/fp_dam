@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF8">
+        <title>EJERCICIO FORMULARIO</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        
+<h1>*** GRAN HOTEL ***</h1>
+<form action="">
+<fieldset>
+    <legend><h2>A continuación introduzca sus datos personales.</h2></legend>
+    <input type="text" name="Nombre" maxlength="20" placeholder="Escriba aqui su nombre" required>
+                <input type="text" name="Apellidos" maxlength="20" placeholder="Escriba aqui sus apellidos" required>
+                <br><br>                
+                <div><input type="number" name="Tlf de contacto" maxlength="9" placeholder="Nº de telefono" required>
+                <input type="email" name="email" placeholder="Escriba aqui su correo electronico" required> </div>
+                <br><br>
+                <div><input type="number" name="Numero de noches" max="99" placeholder="Nº de noches" required></div>
+</fieldset>
+            <br><br>
+			<h2>A continuacion elija sus preferencias :</h2>
+			<br>
+            <label for="Dia de Entrada">Dia de Entrada:</label>
+            <input type="date" id="Dia de Entrada" name="comienzo del alojamiento" value="2021-11-19"	min="2021-11-19" max="2022-12-31">			
+			<label for="Dia de Salida">Dia de Salida:</label>
+            <input type="date" id="dia de entrada" name="Fin del alojamiento" value="2021-11-20"	min="2021-11-20" max="2022-12-31">
+            <img src="h.jpg" class="img-centro" align="center"  alt="hotelito" >	
+			<br><br>
+            <p>
+                Tipo de habitacion que quieres : <br>
+                <input type="radio"  name ="Habitacion Simple" value="simple"> Habitacion Simple<br>
+                <input type="radio"  name ="Habitacion Doble" value="simple"> Habitacion Doble<br>
+                <input type="radio"  name ="Habitacion Matrimonio" value="Matrimonio"> Habitacion Matrimonio<br>
+            </p>
+           
+                
+            <br>
+            Deseas ademas un extra ? Desayuno
+            <input type="checkbox" name"Desayuno" value="Desayuno" > Comida  <input type="checkbox" name"Comida" value="Comida" >
+            Cena <input type="checkbox" name"Cena" value="Cena" > Necesitas ademas cama extra ? 
+            <input type="checkbox" name"Extra" value="Extra" >
+			<br><br>
+            Si lo deseas dejanos alguna sugerencia para atenderte mejor : 
+			<br><br>
+			<textarea name="Sugerencias"></textarea> 
+			<br><br>
+            <button onclick="SubmitEvent('Registrado gracias!!!');">Registrarme </button>
+            <br><br>
+            <button onclick="delete('Vuelvo a empezar por favor!!!');">Recomenzar </button>
+        
+
+        </form>
+    </body>
+</html>

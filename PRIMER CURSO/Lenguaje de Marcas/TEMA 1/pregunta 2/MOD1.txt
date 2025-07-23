@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE agenda [
+
+	<!ELEMENT agenda (contacto)>
+	<!ELEMENT contacto ANY>
+	<!ELEMENT nombre (#PCDATA)>
+	<!ELEMENT apellido (#PCDATA)>
+	<!ELEMENT apellidob (#PCDATA)>
+	<!ELEMENT telefonofijo (a|fijo?)>
+	<!ELEMENT a EMPTY>
+	<!ELEMENT fijo (#PCDATA)>
+	<!ELEMENT telefonomovil (#PCDATA)>
+	<!ELEMENT emilio (a|mail?)>
+	<!ELEMENT mail (#PCDATA)>
+	
+	
+]>
+
+<agenda>
+	<contacto>
+		<nombre> felipe </nombre>
+		<nombre> pedro </nombre>
+		<apellido>Castillo</apellido>
+		<apellidob>Rodriguez</apellidob>
+		<telefonofijo><fijo>923262626</fijo></telefonofijo>
+		<telefonomovil>657575757</telefonomovil>
+		<emilio><mail>LO_QUE_SEA@HOTMAIL.COM</mail></emilio>
+
+	</contacto>
+
+	<contacto>
+		<nombre> Pedro </nombre>
+		<apellido> Hernandez</apellido>
+		<apellidob>sanchez</apellidob>
+		<telefonofijo><a></a></telefonofijo>
+		<telefonomovil>983262626</telefonomovil>
+		<emilio><mail>PHernandezSan@Gmail.com</mail></emilio>
+
+	</contacto>
+</agenda>

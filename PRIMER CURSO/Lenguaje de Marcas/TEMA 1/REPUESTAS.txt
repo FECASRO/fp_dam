@@ -1,0 +1,219 @@
+EJERCICIO 1
+
+
+1A -- Unica respuesta que se me ocurre en este caso seria considerar <elemento> como raiz 
+      aplicandole de esta forma la siguiente norma :
+       En todo documento XML debe existir un elemento raíz, y sólo uno.
+
+1B -- Etiquetas siempre en minusculas
+
+1C -- Al anidar elementos no puede cerrarse un elemento que contenga algún otro 
+      elemento que aún no se haya cerrado.
+
+1D -- En el contenido de los elementos no se pueden utilizar directamente los caracteres mayor 
+      que, >, menor que, <, ampersand, &, dobles comillas, ", y apostrofe, ‘. En el caso de
+      tener que utilizar
+      estos caracteres se sustituyen por las siguientes cadenas:
+
+			
+				Carácter	Cadena
+					
+				    >	          &gt;
+				    <	          &lt;
+				    &	         &amp;
+				    "	        &quot;
+				    '	        &apos;
+
+1E -- NINGUNA ETIQUETA CONTENDRA EN SU INICIO LA CADENA XML EN NINGUNA DE SUS VERSIONES
+
+1F -- El contenido de los elementos no puede contener la cadena "]]>" por compatibilidad con SGML
+
+1G -- LA ETIQUETA DE CIERRE ES DIFERENTE DE LA DE APERTURA
+
+1H -- EL CIERRE DE ETIQUETA SUBRAYADO ES INCORRECTO LE FALTA " / "
+
+
+EJERCICIO 2
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE agenda [
+
+	<!ELEMENT agenda (contacto)>
+	<!ELEMENT contacto ANY>
+	<!ELEMENT nombre (#PCDATA)>
+	<!ELEMENT apellido (#PCDATA)>
+	<!ELEMENT apellidob (#PCDATA)>
+	<!ELEMENT telefonofijo (a|fijo?)>
+	<!ELEMENT a EMPTY>
+	<!ELEMENT fijo (#PCDATA)>
+	<!ELEMENT telefonomovil (#PCDATA)>
+	<!ELEMENT emilio (a|mail?)>
+	<!ELEMENT mail (#PCDATA)>
+	
+	
+]>
+
+<agenda>
+	<contacto>
+		<nombre> felipe </nombre>
+		<nombre> pedro </nombre>
+		<apellido>Castillo</apellido>
+		<apellidob>Rodriguez</apellidob>
+		<telefonofijo><fijo>923262626</fijo></telefonofijo>
+		<telefonomovil>657575757</telefonomovil>
+		<emilio><mail>M.C.CLAUD1@HOTMAIL.COM</mail></emilio>
+
+	</contacto>
+
+	<contacto>
+		<nombre> Pedro </nombre>
+		<apellido> Hernandez</apellido>
+		<apellidob>sanchez</apellidob>
+		<telefonofijo><a></a></telefonofijo>
+		<telefonomovil>983262626</telefonomovil>
+		<emilio><mail>PHernandezSan@Gmail.com</mail></emilio>
+
+	</contacto>
+</agenda>
+
+
+JUSTIFICACION --
+
+He creado una agenda lo mas simple posible definiendo cada contacto con sus campos como nuevos elementos 
+de la agenda
+
+En la notacion contacto decidi poner ANY, por si en un futuro se quisiese implementar dicha agenda
+añadiendo por ejemplo foto de contacto o cualquier otro dato que fuese diferente del resto.
+
+Posteriormente en telefono fijo y direccion de correo electronico, quise experimentar con las etiquetas
+la posibilidad de que un dato o campo apareciera o no , puesto que no todo el mundo en la actualidad
+cuenta con un telefono fijo o desea dar su direccion de correo electronico.Incluso en ocasiones al crear
+una aplicacion deberemos dejar opciones de eleccion.
+
+Finalmente creo que el proposito del ejercicio en si lo cumpli, pero destacaria sobre todo, la labor de 
+busqueda y aprendizaje que he tenido que hacer para comprender mejor todo el tema que engloba el DTD y 
+como funciona con respecto a las simples etiquetas que puse al inicio y tambien cumpliar la labor, eso si 
+de manera mas incompleta.
+
+
+PREGUNTA 3
+
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE recetario [ 
+	
+	<!ELEMENT receta (ingrediente+)> 
+	<!ELEMENT encabezado EMPTY> 
+	<!ATTLIST encabezado nombrereceta ID #REQUIRED> 
+	<!ATTLIST ingrediente comensales ID #REQUIRED> 
+	
+	<!ELEMENT paso (#PCDATA)>
+	
+	<!ELEMENT ingrediente EMPTY> 
+	<!ATTLIST ingrediente nombre ID #REQUIRED> 
+	<!ATTLIST ingrediente cantidad CDATA #REQUIRED> 
+	
+	<!ELEMENT proceso EMPTY> 
+	<!ATTLIST proceso numero CDATA #REQUIRED> 
+	<!ATTLIST proceso explicacion CDATA #REQUIRED> 
+]> 
+ 
+<receta> 
+	<encabezado nombrereceta="Sopa de cebolla" comensales="(4 personas)"/>
+	
+
+	<paso>Ingredientes:</paso>
+	
+
+	<ingrediente cantidad="1 Kg" nombre="de cebollas"  ></ingrediente> 
+	<ingrediente cantidad="2 litros" nombre="de caldo de carne"></ingrediente> 
+	<ingrediente cantidad="100gr." nombre="mantequilla"  ></ingrediente> 
+	<ingrediente cantidad="1 cucharada" nombre="de harina"></ingrediente> 
+	<ingrediente cantidad="100gr." nombre="queso emental suizo o gruyere"  ></ingrediente> 
+	<ingrediente cantidad="rebanadas" nombre="pan tostado"></ingrediente> 
+	<ingrediente cantidad="pizco" nombre="tomillo"  ></ingrediente> 
+	<ingrediente cantidad="1 hoja" nombre="de laurel"></ingrediente> 
+	<ingrediente cantidad="pizco" nombre="de pimienta"></ingrediente> 
+
+	<paso>Proceso</paso>
+
+	<proceso numero="PRIMERO:" explicacion="Pelar y partir las cebollas en rodajas finas."/>
+	<proceso numero="SEGUNDO:" explicacion="Rehogarlas con la mantequilla, sal y pimienta a fuego lento hasta que esten transparentes sin dorarse."/>
+	<proceso numero="TERCERO:" explicacion="Añadir la harina sin dejar de remover."/>
+	<proceso numero="CUARTO:" explicacion="Ponerlo en una cazuela con el caldo, el tomillo y el laurel."/>
+	<proceso numero="QUINTO:" explicacion="Dejar cocer a fuego lento durante unos 15 minutos."/>
+	<proceso numero="QUINTO:" explicacion="Poner las rebanadas de pan encima, espolvorear el queso y gratinar al horno."/>
+</receta>
+
+
+JUSTIFICACION DEL EJERCICIO -- Tras definir todos los elementos que intervienen cree diferentes listas y dentro de estas asigne id 
+a los elementos que posteriormente utilizaremos para encontrar la receta , nombre de la receta, comensales, e ingredientes
+tuve problemas iniciales porque al poner encoding UTF-8 luego lo guardaba sin darme cuenta como ANSI, solventada esta question mas o
+menos pienso que el objetivo esta conseguido.
+
+
+TAREA 4
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<!DOCTYPE modulodam[
+
+<!ELEMENT encabezado EMPTY>
+		<!ATTLIST encabezado modulo CDATA #REQUIRED>
+		<!ATTLIST encabezado horasmodulo CDATA #REQUIRED>
+		<!ATTLIST encabezado fechas CDATA #REQUIRED>
+		<!ATTLIST encabezado numalum CDATA #REQUIRED>
+<!ELEMENT alumno EMPTY>
+	<!ATTLIST alumno nombre CDATA #REQUIRED>
+	<!ATTLIST alumno apellidos CDATA #REQUIRED>
+	<!ATTLIST alumno dni CDATA #REQUIRED>
+	<!ATTLIST alumno movil CDATA #REQUIRED>
+	<!ATTLIST alumno email CDATA #REQUIRED>
+<!ELEMENT direccion EMPTY>
+		<!ATTLIST direccion calle CDATA #REQUIRED>
+		<!ATTLIST direccion cp CDATA #REQUIRED>
+		<!ATTLIST direccion ciudad CDATA #REQUIRED>
+<!ELEMENT academico EMPTY>
+		<!ATTLIST academico faltas CDATA #REQUIRED>
+		<!ATTLIST academico notafinal CDATA #REQUIRED>
+]>
+
+<titulo>
+	<encabezado modulo=" Modulo de Lenguajes de Marcas y Sistemas de Gestion de Informacion "/>
+	<encabezado fechas=" Entre el 15 de septiembre de 2010 y el 30 de junio de 2011" horasmodulo=" 4 horas semanales"/>
+	<encabezado numalum=" Numero actual de matriculados 2 " /> 
+
+	<matriculado>
+		<alumno nombre="Ana" apellidos="Fernandez Gutierrez" dni=" 16965696L" />
+		<direccion calle="C/ El Percebe, 13" ciudad="Santander" cp="39302" />
+		<alumno movil="789654321" email="ana.fdezgtrrez@hotmail.com" />
+
+		<academico faltas=" sin datos " notas="sin datos" />
+</matriculado>
+<matriculado>
+		<alumno nombre="Pepito " apellidos="Grillo" dni=" 98765432H" />
+		<direccion calle="Avd. El Pez 5" ciudad="Suances" cp="39401" />
+		<alumno movil="656566555" email="yhyh@yahoo.com"  />
+
+		<academico faltas=" sin faltas " notas="Apto" />
+</matriculado>		
+		
+</titulo>
+
+
+
+JUSTIFICACION -- He usado diferentes listas porque me parece la manera mas sencilla de mantener
+agrupados los datos de manera mas organizada, en pequeños grupos puede resultar mas aparatoso visualmente
+hablando pero cada dato tiene su grupo, por primera vez en este ejercicio he utilizado standalone
+quizas en algunas de las tareas me he metido en charcos poco necesarios,con aciertos y errores supongo
+pero al fin y al cabo no estoy buscando lo mas sencillo sino practicar diferentes cosas con las
+informaciones que he ido encontrando e intentar buscar mi propio enfoque en cada una de las tareas
+  
+
+
+
+
+
+
+	
+ 
+
+

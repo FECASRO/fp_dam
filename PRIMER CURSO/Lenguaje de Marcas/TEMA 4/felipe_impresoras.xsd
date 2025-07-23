@@ -1,0 +1,68 @@
+﻿<?xml version="1.0"?>
+  <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" >
+           
+  <xs:element name="impresoras">
+      <xs:complexType>
+                  <xs:sequence>
+                       <xs:element ref="impresora" maxOccurs="unbounded"/>
+                  </xs:sequence>
+          </xs:complexType>
+  </xs:element>
+  <xs:element name="impresora">
+                  <xs:complexType>
+                          <xs:sequence>
+                  <!-- tipo marca modelo   -->                    
+                                    <xs:element name="marca" type="xs:string"/>
+                                    <xs:element name="modelo" type="xs:string"/>
+          <!-- tipo peso es un decimal para permitir hasta 2 decimales -->
+                                     <xs:element name="peso" type="xs:string">
+                                          <xs:restriction base="xs:decimal">
+                                              <xs:minExclusive value="0"/>
+                                              <xs:fractionDigits value="2"/>
+                                          </xs:restriction>   
+                                    </xs:element>
+            <!-- tipo tamaño  elemento que puede aparecer mas de una vez con atributos tamaños de papel -->
+                    <xs:element name="tamaño" minOccurs="1" maxOccurs="unbounded">
+                          <xs:restriction base="xs:string" use="required">
+                                  <xs:choice>
+                                        <xs:atributte value="A1"></xs:atributte>
+                                        <xs:atributte value="A3"></xs:atributte>
+                                        <xs:atributte value="A4"></xs:atributte>
+                                        <xs:atributte value="A5"></xs:atributte>
+                                        <xs:atributte value="A6"></xs:atributte>
+                                    </xs:choice>
+                          </xs:restriction>
+                    </xs:element>
+             <!-- tipo cartucho he intentado un pattern con una C tabulacion - tabulacion tres numeros entre 0y9 una letra entre A y Z
+              mayusculas y una segunda letra que puede aparecer o no  -->
+                    <xs:element name="cartucho" type="xs:string" use="required">
+                          <xs:pattern value="C-[0-9]{3}[A-Z]{1,2}"/>
+                     </xs:element>
+              <!-- tipo enred  no es required y esta en elemento vacio por lo tanto por defecto es opcional  --> 
+                     <xs:element name="enred" type="xs:string"  minOccurs="0"  />
+                             
+                <!-- tipo compra  elemento normal unica restriccion entero positivo  -->                     
+                                      <xs:atributte name="compra">
+                                            <xs:restriction base="xs:positiveInteger" use="required">
+                                             </xs:restriction>
+                                        </xs:atributte>               
+               <!-- tipo modelo Impresora   aqui uso en restricion id porque el numero de serie hace de identificador -->
+                                      <xs:atributte name="numSerie"  >
+                                            <xs:restriction base="xs:id" use="required">
+                                            </xs:restriction>
+                                      </xs:atributte>   
+                <!-- tipo modelo de impresion  aqui uso el elemento enumeracion porque tengo tres valores cerrados para elegir  -->
+                                      <xs:atributte name="tipo">
+                                              <xs:restriction base="xs:string" use="required">
+                                                      <xs:enumeration value="matricial"/>
+                                                      <xs:enumeration value="laser"/>
+                                                      <xs:enumeration value="tintal"/>
+                                              </xs:restriction>
+                                      </xs:atributte>       
+                              </xs:sequence>    
+                               </xs:complexType>
+                      </xs:element>
+                                      
+              
+                      
+</xs:schema>
